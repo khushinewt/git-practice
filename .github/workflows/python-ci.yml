@@ -1,0 +1,23 @@
+name: Python CI Workflow
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build-and-test:
+    runs-on:
+      ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-verison: '3.11'
+      - name: Install Dependencies
+        run: pip install -r sample_python_project/requirements.txt
+      - name: Run Application
+        run: python sample_python_project/app.py
+      - name: Run Tests
+        run: python sample_python_project/test_app.py
