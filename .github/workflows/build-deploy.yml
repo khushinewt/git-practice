@@ -13,4 +13,4 @@ jobs:
       - name: build
         run: echo "Build in progress:"
       - name: deploy
-        run: echo "Deploy in progress: "
+        run: echo "Deploy in progress:"
