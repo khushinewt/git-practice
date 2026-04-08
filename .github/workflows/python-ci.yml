@@ -16,8 +16,8 @@ jobs:
         with:
           python-verison: '3.11'
       - name: Install Dependencies
-        run: pip install -r sample_python_project/requirements.txt
+        run: pip install -r sample-python-project/requirements.txt
       - name: Run Application
-        run: python sample_python_project/app.py
+        run: python sample-python-project/app.py
       - name: Run Tests
-        run: python sample_python_project/test_app.py
+        run: python sample-python-project/test_app.py
